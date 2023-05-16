@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chess Board</title>
+  <style>
+    /* Chess board style */
+    #board {
+      width: 320px;
+      height: 320px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .square {
+      width: 40px;
+      height: 40px;
+      box-sizing: border-box;
+      border: 1px solid black;
+    }
+
+    /* Set styles for white squares */
+    .square.white {
+    background-color: #fff;
+    }
+
+    /* Set styles for black squares */
+    .square.black {
+    background-color: #999;
+    }
+
+    /* Set styles for the chess pieces */
+    .square img {
+    max-width: 100%;
+    max-height: 100%;
+    }
+
+  </style>
+</head>
+<body>
+  <div id="board">
+    <!-- First row -->
+    <div class="square white" data-name="brook1">
+        <img src="./assets/images/black_rook.png" >
+    </div>
+    <div class="square black" data-name="bknight1">
+        <img src="./assets/images/black_knight.png" >
+    </div>
+    <div class="square white" data-name="bbishop1">
+        <img src="./assets/images/Chess_bdt45.svg" >
+    </div>
+    <div class="square black" data-name="bqueen">
+        <img src="./assets/images/black_queen.png" >
+    </div>
+    <div class="square white" data-name="bking">
+        <img src="./assets/images/black_kind.png" >
+    </div>
+    <div class="square black" data-name="bbishop2">
+        <img src="./assets/images/Chess_bdt45.svg" >
+    </div>
+    <div class="square white" data-name="bknight2">
+        <img src="./assets/images/black_knight.png" >
+    </div>
+    <div class="square black" data-name="brook2">
+        <img src="./assets/images/black_rook.png" >
+    </div>
+    
+    <!-- Second row -->
+    <div class="square black" data-name="bpawn1">
+        <img src="./assets/images/black_pawn.png" >
+    </div>
+    <div class="square white" data-name="bpawn2">
+        <img src="./assets/images/black_pawn.png" >
+    </div>
+    <div class="square black" data-name="bpawn3">
+        <img src="./assets/images/black_pawn.png" >
+    </div>
+    <div class="square white" data-name="bpawn4">
+        <img src="./assets/images/black_pawn.png" >
+    </div>
+    <div class="square black" data-name="bpawn5">
+        <img src="./assets/images/black_pawn.png" >
+    </div>
+    <div class="square white" data-name="bpawn6">
+        <img src="./assets/images/black_pawn.png" >
+    </div>
+    <div class="square black" data-name="bpawn7">
+        <img src="./assets/images/black_pawn.png" >
+    </div>
+    <div class="square white" data-name="bpawn8">
+        <img src="./assets/images/black_pawn.png" >
+    </div>
+    
+    <!-- Third row -->
+    <div class="square white"></div>
+    <div class="square black"></div>
+    <div class="square white"></div>
+    <div class="square black"></div>
+    <div class="square white"></div>
+    <div class="square black"></div>
+    <div class="square white"></div>
+    <div class="square black"></div>
+    
+    <!-- Fourth row -->
+    <div class="square black"></div>
+    <div class="square white"></div>
+    <div class="square black"></div>
+    <div class="square white"></div>
+    <div class="square black"></div>
+    <div class="square white"></div>
+    <div class="square black"></div>
+    <div class="square white"></div>
+    
+    <!-- Fifth row -->
+    <div class="square white"></div>
+    <div class="square black"></div>
+    <div class="square white"></div>
+    <div class="square black"></div>
+    <div class="square white"></div>
+    <div class="square black"></div>
+    <div class="square white"></div>
+    <div class="square black"></div>
+    
+    <!-- Sixth row -->
+    <div class="square black"></div>
+    <div class="square white"></div>
+    <div class="square black"></div>
+    <div class="square white"></div>
+    <div class="square black"></div>
+    <div class="square white"></div>
+    <div class="square black"></div>
+    <div class="square white"></div>
+    
+    <!-- Seventh row -->
+    <div class="square whitePieces white" data-name="wpawn1">
+        <img src="./assets/images/white_pawn.png" alt="pawn1">
+    </div>
+    <div class="square whitePieces black"  data-name="wpawn2">
+        <img src="./assets/images/white_pawn.png" alt="pawn2">
+    </div>
+    <div class="square whitePieces white" data-name="wpawn3">
+        <img src="./assets/images/white_pawn.png" >
+    </div>
+    <div class="square whitePieces black" data-name="wpawn4">
+        <img src="./assets/images/white_pawn.png">
+    </div>
+    <div class="square whitePieces white" data-name="wpawn5">
+        <img src="./assets/images/white_pawn.png">
+    </div>
+    <div class="square whitePieces black" data-name="wpawn6">
+        <img src="./assets/images/white_pawn.png">
+    </div>
+    <div class="square whitePieces white" data-name="wpawn7">
+        <img src="./assets/images/white_pawn.png">
+    </div>
+    <div class="square whitePieces black" data-name="wpawn8">
+        <img src="./assets/images/white_pawn.png">
+    </div>
+    
+    <!-- Eighth row -->
+    <div class="square whitePieces black" data-name="wrook1">
+        <img src="./assets/images/white_rook.png" alt="whiterook">
+    </div>
+    <div class="square whitePieces white" data-name="wknight1">
+        <img src="./assets/images/white_knight.png">
+    </div>
+    <div class="square whitePieces black" data-name="wbishop1">
+        <img src="./assets/images/white_bishop.png">
+    </div>
+    <div class="square whitePieces white" data-name="wqueen">
+        <img src="./assets/images/white_queen.png">
+    </div>
+    <div class="square whitePieces black" data-name="wking">
+        <img src="./assets/images/white_king.png">
+    </div>
+    <div class="square whitePieces white" data-name="wbishop2">
+        <img src="./assets/images/white_bishop.png">
+    </div>
+    <div class="square whitePieces black" data-name="wknight2">
+        <img src="./assets/images/white_knight.png">
+    </div>
+    <div class="square whitePieces white" data-name="wrook2">
+        <img src="./assets/images/white_rook.png">
+    </div>
+  </div>
+  <script src="assets/script.js"></script>
+</body>
+</html>
